@@ -3,13 +3,14 @@ Source code of the paper ``Deforming the Loss Surface''
 ## Requirements and Usage 
 ### Requirements
 
-- python (**>=3.7**)
-- pytorch (**>=1.1.0**)
-- easydict>=1.9
-- future>=0.17.1
-- tensorboard(**>=1.4.0**) 
+- python **>=3.7**
+- pytorch **>=1.1.0**
+- easydict **>=1.9**
+- future **>=0.17.1**
+- tensorboard **>=1.4.0**
+- pyyaml
 
-- Other dependencies (pyyaml, easydict)
+
 ```bash
 pip install -r requirements.txt
 ```
