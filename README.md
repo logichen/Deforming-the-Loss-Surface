@@ -27,12 +27,12 @@ To compare the original PreResNet-20 with the deformed version on CIFAR-100 via 
 
 Original:
 ```bash
-cd CIFAR_all/PreResNets_DenseNets_ResNext
+cd ./CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_ori.py --work-path ./experiments/cifar100/preresnet20
 ```
 Deformed:
 ```bash
-cd CIFAR_all/PreResNets_DenseNets_ResNext
+cd ./CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet20_C100_deformed.py --work-path ./experiments/cifar100/preresnet20
 ```
 
@@ -40,12 +40,12 @@ To compare the original PreResNet-110 with the deformed version on CIFAR-10 via 
 
 Original:
 ```bash
-cd CIFAR_all/PreResNets_DenseNets_ResNext
+cd ./CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_ori.py --work-path ./experiments/cifar10/preresnet110
 ```
 Deformed:
 ```bash
-cd CIFAR_all/PreResNets_DenseNets_ResNext
+cd ./CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/preresnet110
 ```
 #### ResNets on CIFAR
@@ -55,12 +55,12 @@ To compare the original ResNet-20 with the deformed version on CIFAR-10 via the 
 
 Original:
 ```bash
-cd CIFAR_all/ResNets/CIFAR10
+cd ./CIFAR_all/ResNets/CIFAR10
 python -u main_ori.py --model resnet20
 ```
 Deformed:
 ```bash
-cd CIFAR_all/ResNets/CIFAR10
+cd ./CIFAR_all/ResNets/CIFAR10
 python -u main_ResNet20_C10_deformed.py --model resnet20
 ```
 
@@ -68,31 +68,31 @@ To compare the original ResNet-110 with the deformed version on CIFAR-100 via th
 
 Original:
 ```bash
-cd CIFAR_all/ResNets/CIFAR100
+cd ./CIFAR_all/ResNets/CIFAR100
 python -u main_ori.py --model resnet110
 ```
 Deformed:
 ```bash
-cd CIFAR_all/ResNets/CIFAR100
+cd ./CIFAR_all/ResNets/CIFAR100
 python -u main_ResNet110_C100_deformed.py --model resnet110
 ```
 #### EfficientNets on CIFAR
 To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via the following instructions.
 ```bash
-cd CIFAR_all/EfficientNets
+cd ./CIFAR_all/EfficientNets
 python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 ```bash
-cd CIFAR_all/EfficientNets
+cd ./CIFAR_all/EfficientNets
 python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via the following instructions.
 ```bash
-cd CIFAR_all/EfficientNets
+cd ./CIFAR_all/EfficientNets
 python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ```bash
-cd CIFAR_all/EfficientNets
+cd ./CIFAR_all/EfficientNets
 python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ### ImageNet
