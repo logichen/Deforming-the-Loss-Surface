@@ -9,8 +9,10 @@ Source code of the paper ``Deforming the Loss Surface''
 - future **>=0.17.1**
 - tensorboard **>=1.4.0**
 - numpy **>=1.18**
-- pyyaml
-
+- cxxfilt **>=0.2.0**
+- tqdm **>=4.28.1**
+- pyyaml **>=5.1**
+- pytest **>=3.5.1**
 
 ```bash
 pip install -r requirements.txt
