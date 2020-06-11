@@ -61,17 +61,11 @@ python -u main_ori.py --model resnet110
 ```bash
 python -u main_ResNet110_C100_deformed.py --model resnet110
 ```
-
+#### EfficientNets
+To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via
 ```bash
-## 1 GPU for lenet
-CUDA_VISIBLE_DEVICES=0 python -u train.py --work-path ./experiments/cifar10/lenet
-
-## resume from ckpt
-CUDA_VISIBLE_DEVICES=0 python -u train.py --work-path ./experiments/cifar10/lenet --resume
-
-## 2 GPUs for resnet1202
-CUDA_VISIBLE_DEVICES=0,1 python -u train.py --work-path ./experiments/cifar10/preresnet1202
-
-## 4 GPUs for densenet190bc
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -u train.py --work-path ./experiments/cifar10/densenet190bc
-``` 
+python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_the_data
+```
+```bash
+python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_the_data
+```
