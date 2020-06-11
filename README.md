@@ -96,7 +96,7 @@ cd ./CIFAR_all/EfficientNets
 python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ### ImageNet
-Change the path of the ImageNet dataset by modifying `dataset_dir` in `./Experiments_on_ImageNet/XXX/Deformed/configs/model_name.yaml`, where 'XXX' can be replaced by the model name such as 'ResNet18' or 'DenseNet121', and 'model_name.yaml' means .yaml files such as 'resnet_18.yaml'.
+Change the path of the ImageNet dataset by modifying `dataset_dir` in `./Experiments_on_ImageNet/XXX/Deformed/configs/model_name.yaml`, where 'XXX' can be replaced by the model name such as 'ResNet18' or 'DenseNet121', and 'model_name.yaml' means the `.yaml` files such as 'resnet_18.yaml'.
 
 To compare the original ResNet-18 with the deformed version on ImageNet via the following instructions.
 ```bash
