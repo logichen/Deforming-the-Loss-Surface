@@ -17,10 +17,11 @@ pip install -r requirements.txt
 ### Usage 
 
 #### PreResNets
-simply run the cmd for the training:
+Training the deformation version:
 
 ```bash
-cd 
+cd .\Experiments_on_CIFAR\CIFAR10\PreResNet_20\Deformed
+python -u train.py --work-path ./experiments/cifar10/preresnet20
 ```
 
 ```bash
