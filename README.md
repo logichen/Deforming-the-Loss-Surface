@@ -22,7 +22,9 @@ Assume that the default path is at `Deforming_the_Loss_Surface/`
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d) on CIFAR
 Download the CIFAR-10 and CIFAR-100 datasets and put them into the `./CIFAR_all/PreResNets_DenseNets_ResNext/data` folder for preparation. 
+
 To compare the original PreResNet-20 with the deformed version on CIFAR-100 via the following instructions.
+
 Original:
 ```bash
 cd CIFAR_all/PreResNets_DenseNets_ResNext
@@ -35,6 +37,7 @@ python -u train_PreResNet20_C100_deformed.py --work-path ./experiments/cifar100/
 ```
 
 To compare the original PreResNet-110 with the deformed version on CIFAR-10 via the following instructions.
+
 Original:
 ```bash
 cd CIFAR_all/PreResNets_DenseNets_ResNext
@@ -47,7 +50,9 @@ python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/p
 ```
 #### ResNets on CIFAR
 Download the CIFAR-10 and CIFAR-100 and put them into `./CIFAR_all/ResNets/CIFAR10/data` and `./CIFAR_all/ResNets/CIFAR100/data` respectively. 
+
 To compare the original ResNet-20 with the deformed version on CIFAR-10 via the following instructions.
+
 Original:
 ```bash
 cd CIFAR_all/ResNets/CIFAR10
@@ -60,7 +65,8 @@ python -u main_ResNet20_C10_deformed.py --model resnet20
 ```
 
 To compare the original ResNet-110 with the deformed version on CIFAR-100 via the following instructions.
-##### Original:
+
+Original:
 ```bash
 cd CIFAR_all/ResNets/CIFAR100
 python -u main_ori.py --model resnet110
