@@ -1,5 +1,5 @@
-# Deforming-the-Loss-Surface
-Source code of the paper ``Deforming the Loss Surface''
+# Deforming the Loss Surface
+Source code of the paper "Deforming the Loss Surface"
 ## Requirements
 
 - python **>=3.7**
@@ -12,6 +12,8 @@ Source code of the paper ``Deforming the Loss Surface''
 - tqdm **>=4.28.1**
 - pyyaml **>=5.1**
 - pytest **>=3.5.1**
+- torchvision
+- NVIDIA Apex
 
 ```bash
 pip install -r requirements.txt
@@ -117,3 +119,4 @@ CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_no
 cd ./Experiments_on_ImageNet/Deformed
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 9876 train.py --config configs/imagenet/resnet_34.yaml train.output_dir experiments/deformed_resnet34_2gpus_120ep train.distributed True train.dataloader.pin_memory True > deformed_resnet34_2gpus_120ep.txt 2>&1
 ```
+
