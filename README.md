@@ -17,12 +17,13 @@ Source code of the paper ``Deforming the Loss Surface''
 pip install -r requirements.txt
 ```
 ## Usage 
-Assume that the default path is at `Deforming_the_Loss_Surface`
+Assume that the default path is at `Deforming_the_Loss_Surface/`
 ### Preparation for Datasets
-For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the `\data` folder. For ImageNet models, change the path of the dataset by modifying `dataset_dir` in `\configs\imagenet\model_name.yaml`. 
+For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the `CIFAR_all/PreResNets_DenseNets_ResNext/data` folder. For ImageNet models, change the path of the dataset by modifying `dataset_dir` in `/configs/imagenet/model_name.yaml`. 
 
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d) on CIFAR
+Download the CIFAR-10 and CIFAR-100 datasets and put them into the `./CIFAR_all/PreResNets_DenseNets_ResNext/data` folder for preparation. 
 To compare the original PreResNet-20 with the deformed version on CIFAR-100 via the following instructions.
 Original:
 ```bash
@@ -47,6 +48,7 @@ cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/preresnet110
 ```
 #### ResNets on CIFAR
+Download the CIFAR-10 and CIFAR-100 and put them into `./CIFAR_all/ResNets/CIFAR10/data` and `./CIFAR_all/ResNets/CIFAR10/data` respectively. 
 To compare the original ResNet-20 with the deformed version on CIFAR-10 via the following instructions.
 Original:
 ```bash
@@ -87,6 +89,8 @@ python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_dat
 python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ### ImageNet
+Change the path of the ImageNet dataset by modifying `dataset_dir` in `./Experiments_on_ImageNet/XXX/Deformed/configs/model_name.yaml`, where 'XXX' can be replaced by the model name such as 'ResNet18' or 'DenseNet121', and 'model_name.yaml' means .yaml files such as 'resnet_18.yaml'.
+
 To compare the original ResNet-18 with the deformed version on ImageNet via the following instructions.
 ```bash
 cd ./ResNet18/Original
