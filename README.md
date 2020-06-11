@@ -64,15 +64,25 @@ python -u main_ResNet110_C100_deformed.py --model resnet110
 #### EfficientNets
 To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via
 ```bash
-python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 ```bash
-python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via
 ```bash
-python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ```bash
-python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
+```
+### ImageNet
+To compare the original ResNet-18 with the deformed version on ImageNet via
+```bash
+cd ./ResNet18/Original
+CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 9595 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/ori_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet18_2gpus_120ep.txt 2>&1
+```
+```bash
+cd .. && cd Deformed
+CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 7658 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/deformed_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > odeformed_resnet18_2gpus_120ep.txt 2>&1
 ```
