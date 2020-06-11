@@ -1,7 +1,6 @@
 # Deforming-the-Loss-Surface
 Source code of the paper ``Deforming the Loss Surface''
-## Requirements and Usage 
-### Requirements
+## Requirements
 
 - python **>=3.7**
 - pytorch **>=1.1.0**
@@ -17,14 +16,17 @@ Source code of the paper ``Deforming the Loss Surface''
 ```bash
 pip install -r requirements.txt
 ```
-### Usage 
-#### Preparation for Datasets
-For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the `\data` folder. For ImageNet models, change the `dataset_dir` by modifying `\configs\imagenet\`
-#### PreResNets
-Training the deformation version:
+## Usage 
+### Preparation for Datasets
+For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the `\data` folder. For ImageNet models, change the path of the dataset by modifying `dataset_dir` in `\configs\imagenet\model_name.yaml`. 
 
+### CIFAR
+#### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d):
 ```bash
-cd .\Experiments_on_CIFAR\CIFAR10\PreResNet_20\Deformed
+python -u train.py --work-path ./experiments/cifar10/preresnet20
+```
+```bash
+cd ./PreResNets_DenseNets_ResNext
 python -u train.py --work-path ./experiments/cifar10/preresnet20
 ```
 
