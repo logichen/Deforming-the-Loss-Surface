@@ -64,8 +64,15 @@ python -u main_ResNet110_C100_deformed.py --model resnet110
 #### EfficientNets
 To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via
 ```bash
-python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_the_data
+python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
 ```
 ```bash
-python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_the_data
+python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+```
+To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via
+```bash
+python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
+```
+```bash
+python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_the_ImageNet
 ```
