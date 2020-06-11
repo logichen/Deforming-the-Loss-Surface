@@ -72,6 +72,7 @@ python -u main_ResNet110_C100_deformed.py --model resnet110
 #### EfficientNets on CIFAR
 To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via the following instructions.
 ```bash
+cd CIFAR_all/EfficientNets
 python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 ```bash
