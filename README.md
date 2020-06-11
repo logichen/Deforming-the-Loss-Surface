@@ -83,13 +83,16 @@ cd CIFAR_all/EfficientNets
 python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 ```bash
+cd CIFAR_all/EfficientNets
 python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via the following instructions.
 ```bash
+cd CIFAR_all/EfficientNets
 python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ```bash
+cd CIFAR_all/EfficientNets
 python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ### ImageNet
@@ -97,20 +100,20 @@ Change the path of the ImageNet dataset by modifying `dataset_dir` in `./Experim
 
 To compare the original ResNet-18 with the deformed version on ImageNet via the following instructions.
 ```bash
-cd ./ResNet18/Original
+cd ./Experiments_on_ImageNet/ResNet18/Original
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 9595 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/ori_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet18_2gpus_120ep.txt 2>&1
 ```
 ```bash
-cd .. && cd Deformed
+cd ./Experiments_on_ImageNet/ResNet18/Deformed
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 7658 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/deformed_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > deformed_resnet18_2gpus_120ep.txt 2>&1
 ```
 
 To compare the original ResNet-34 with the deformed version on ImageNet via the following instructions.
 ```bash
-cd ./ResNet34/Original
+cd ./Experiments_on_ImageNet/ResNet34/Original
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 5632 train.py --config configs/imagenet/resnet_34.yaml train.output_dir experiments/ori_resnet34_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet34_2gpus_120ep.txt 2>&1
 ```
 ```bash
-cd .. && cd Deformed
+cd ./Experiments_on_ImageNet/Deformed
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 9876 train.py --config configs/imagenet/resnet_34.yaml train.output_dir experiments/deformed_resnet34_2gpus_120ep train.distributed True train.dataloader.pin_memory True > deformed_resnet34_2gpus_120ep.txt 2>&1
 ```
