@@ -19,7 +19,6 @@ Code for the paper "Deforming the Loss Surface"
 pip install -r requirements.txt
 ```
 ## Usage 
-Assume that the default path is at `Deforming_the_Loss_Surface/`
 
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d) on CIFAR
