@@ -22,54 +22,62 @@ For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into
 
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d) on CIFAR
-To compare the original PreResNet-20 with the deformed version on CIFAR-100 via
+To compare the original PreResNet-20 with the deformed version on CIFAR-100 via the following instructions.
+Original:
 ```bash
+cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_ori.py --work-path ./experiments/cifar100/preresnet20
 ```
-
+Deformed:
 ```bash
+cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet20_C100_deformed.py --work-path ./experiments/cifar100/preresnet20
 ```
 
-To compare the original PreResNet-110 with the deformed version on CIFAR-10 via
+To compare the original PreResNet-110 with the deformed version on CIFAR-10 via the following instructions.
+Original:
 ```bash
+cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_ori.py --work-path ./experiments/cifar10/preresnet110
 ```
-
+Deformed:
 ```bash
+cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/preresnet110
 ```
 #### ResNets on CIFAR
-To compare the original ResNet-20 with the deformed version on CIFAR-10 via
+To compare the original ResNet-20 with the deformed version on CIFAR-10 via the following instructions.
+Original:
 ```bash
-cd CIFAR10
-```
-```bash
+cd CIFAR_all/ResNets/CIFAR10
 python -u main_ori.py --model resnet20
 ```
+Deformed:
 ```bash
+cd CIFAR_all/ResNets/CIFAR10
 python -u main_ResNet20_C10_deformed.py --model resnet20
 ```
 
-To compare the original ResNet-110 with the deformed version on CIFAR-100 via
+To compare the original ResNet-110 with the deformed version on CIFAR-100 via the following instructions.
+##### Original:
 ```bash
-cd CIFAR100
-```
-```bash
+cd CIFAR_all/ResNets/CIFAR100
 python -u main_ori.py --model resnet110
 ```
+Deformed:
 ```bash
+cd CIFAR_all/ResNets/CIFAR100
 python -u main_ResNet110_C100_deformed.py --model resnet110
 ```
 #### EfficientNets on CIFAR
-To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via
+To compare the original EficientNet-B0 with the deformed version on CIFAR-10 via the following instructions.
 ```bash
 python train_C10_ori.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
 ```bash
 python train_EficientNetB0_C10_deformed.py --model efficientnet_b0 --data_dir path_of_cifar10_data
 ```
-To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via
+To compare the original EficientNet-B1 with the deformed version on CIFAR-100 via the following instructions.
 ```bash
 python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
@@ -77,7 +85,7 @@ python train_C100_ori.py --model efficientnet_b0 --data_dir path_of_cifar100_dat
 python train_EficientNetB0_C100_deformed.py --model efficientnet_b0 --data_dir path_of_cifar100_data
 ```
 ### ImageNet
-To compare the original ResNet-18 with the deformed version on ImageNet via
+To compare the original ResNet-18 with the deformed version on ImageNet via the following instructions.
 ```bash
 cd ./ResNet18/Original
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 9595 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/ori_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet18_2gpus_120ep.txt 2>&1
@@ -87,7 +95,7 @@ cd .. && cd Deformed
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 7658 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/deformed_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > deformed_resnet18_2gpus_120ep.txt 2>&1
 ```
 
-To compare the original ResNet-34 with the deformed version on ImageNet via
+To compare the original ResNet-34 with the deformed version on ImageNet via the following instructions.
 ```bash
 cd ./ResNet34/Original
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 5632 train.py --config configs/imagenet/resnet_34.yaml train.output_dir experiments/ori_resnet34_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet34_2gpus_120ep.txt 2>&1
