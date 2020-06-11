@@ -22,6 +22,14 @@ For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into
 
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d):
+To compare the original PreResNet-20 with the deformed version on CIFAR-100 via
+```bash
+python -u train_ori.py --work-path ./experiments/cifar100/preresnet20
+```
+
+```bash
+python -u train_PreResNet20_C100_deformed.py --work-path ./experiments/cifar100/preresnet20
+```
 
 To compare the original PreResNet-110 with the deformed version on CIFAR-10 via
 ```bash
@@ -31,13 +39,27 @@ python -u train_ori.py --work-path ./experiments/cifar10/preresnet110
 ```bash
 python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/preresnet110
 ```
-To compare the original PreResNet-20 with the deformed version on CIFAR-100 via
+#### ResNets
+To compare the original ResNet-20 with the deformed version on CIFAR-10 via
 ```bash
-python -u train_ori.py --work-path ./experiments/cifar10/preresnet20
+cd CIFAR10
+```
+```bash
+python -u main_ori.py --model resnet20
+```
+```bash
+python -u main_ResNet20_C10_deformed.py --model resnet20
 ```
 
+To compare the original ResNet-110 with the deformed version on CIFAR-100 via
 ```bash
-python -u train_PreResNet20_C100_deformed.py --work-path ./experiments/cifar10/preresnet12
+cd CIFAR100
+```
+```bash
+python -u main_ori.py --model resnet110
+```
+```bash
+python -u main_ResNet110_C100_deformed.py --model resnet110
 ```
 
 ```bash
