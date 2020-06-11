@@ -8,6 +8,7 @@ Source code of the paper ``Deforming the Loss Surface''
 - easydict **>=1.9**
 - future **>=0.17.1**
 - tensorboard **>=1.4.0**
+- numpy **>=1.18**
 - pyyaml
 
 
