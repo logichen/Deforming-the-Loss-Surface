@@ -1,5 +1,5 @@
 # Deforming the Loss Surface
-Source code of the paper "Deforming the Loss Surface"
+Code for the paper "Deforming the Loss Surface"
 ## Requirements
 
 - python **>=3.7**
