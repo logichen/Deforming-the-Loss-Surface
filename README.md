@@ -18,7 +18,8 @@ Source code of the paper ``Deforming the Loss Surface''
 pip install -r requirements.txt
 ```
 ### Usage 
-
+#### Preparation for Datasets
+For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the '\data' folder. For ImageNet models, change the 'dataset_dir' by modifying '\configs\imagenet\' 
 #### PreResNets
 Training the deformation version:
 
