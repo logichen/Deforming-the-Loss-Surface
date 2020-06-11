@@ -86,7 +86,8 @@ CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_no
 cd .. && cd Deformed
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 7658 train.py --config configs/imagenet/resnet_18.yaml train.output_dir experiments/deformed_resnet18_2gpus_120ep train.distributed True train.dataloader.pin_memory True > deformed_resnet18_2gpus_120ep.txt 2>&1
 ```
-To compare the original ResNet-18 with the deformed version on ImageNet via
+
+To compare the original ResNet-34 with the deformed version on ImageNet via
 ```bash
 cd ./ResNet34/Original
 CUDA_VISIBLE_DEVICES=0,1 nohup python -m torch.distributed.launch --nproc_per_node 2 --master_port 5632 train.py --config configs/imagenet/resnet_34.yaml train.output_dir experiments/ori_resnet34_2gpus_120ep train.distributed True train.dataloader.pin_memory True > ori_resnet34_2gpus_120ep.txt 2>&1
