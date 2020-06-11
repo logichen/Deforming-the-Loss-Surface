@@ -18,8 +18,6 @@ pip install -r requirements.txt
 ```
 ## Usage 
 Assume that the default path is at `Deforming_the_Loss_Surface/`
-### Preparation for Datasets
-For CIFAR models, download the CIFAR-10 and CIFAR-100 datasets and put them into the `CIFAR_all/PreResNets_DenseNets_ResNext/data` folder. For ImageNet models, change the path of the dataset by modifying `dataset_dir` in `/configs/imagenet/model_name.yaml`. 
 
 ### CIFAR
 #### PreResNets, DensNets, and SE-ResNeXt-29 (16 x 64 d) on CIFAR
@@ -48,7 +46,7 @@ cd CIFAR_all/PreResNets_DenseNets_ResNext
 python -u train_PreResNet110_C10_deformed.py --work-path ./experiments/cifar10/preresnet110
 ```
 #### ResNets on CIFAR
-Download the CIFAR-10 and CIFAR-100 and put them into `./CIFAR_all/ResNets/CIFAR10/data` and `./CIFAR_all/ResNets/CIFAR10/data` respectively. 
+Download the CIFAR-10 and CIFAR-100 and put them into `./CIFAR_all/ResNets/CIFAR10/data` and `./CIFAR_all/ResNets/CIFAR100/data` respectively. 
 To compare the original ResNet-20 with the deformed version on CIFAR-10 via the following instructions.
 Original:
 ```bash
